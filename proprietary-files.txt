@@ -66,6 +66,9 @@ vendor/etc/nfc/sec_s3nrn4v_hwreg.bin
 vendor/etc/nfc/sec_s3nrn4v_swreg.bin
 vendor/firmware/nfc/sec_s3nrn4v_firmware.bin
 
+# Sensors
+-vendor/lib64/sensors.sensorhub.so
+
 # Teegris Firmware
 vendor/tee/00000000-0000-0000-0000-000000534b4d
 vendor/tee/00000000-0000-0000-0000-0000534b504d
