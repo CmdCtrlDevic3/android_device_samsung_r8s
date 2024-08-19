@@ -4,6 +4,9 @@ ro.vendor.fingerprint.type=udfps_optical
 ro.vendor.fingerprint.request_touch_event=true
 ro.vendor.fingerprint.cancel_on_enroll_completion-true
 
+# Graphics
+ro.surface_flinger.use_content_detection_for_refresh_rate=false
+
 # Wifi
 ro.vendor.wifi.sap.interface=wlan1
 vendor.wifi.dualconcurrent.interface=wlan1
