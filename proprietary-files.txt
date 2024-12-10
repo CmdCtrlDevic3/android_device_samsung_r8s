@@ -4,8 +4,10 @@
 # Audio
 vendor/etc/dolby/dax-default.xml
 vendor/etc/floating_feature.xml
+-vendor/lib/libfloatingfeature.so
 -vendor/lib/librecordalive.so
 -vendor/lib/lib_SamsungRec_07020.so
+-vendor/lib/libsecaudioinfo.so
 -vendor/lib/soundfx/libswdap.so
 
 # Audio (Firmware)
@@ -55,6 +57,7 @@ vendor/firmware/setfile_hi847.bin
 vendor/firmware/setfile_imx616.bin
 
 # GPS/GNSS
+-vendor/bin/hw/gpsd
 -vendor/lib64/libwrappergps.so
 
 # Hotword Enrollment
