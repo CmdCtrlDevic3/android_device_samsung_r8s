@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2019-2025 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,13 +16,11 @@
 
 BOARD_WLAN_DEVICE := qcwcn
 
-DEVICE_PATH := device/samsung/r8s
-
 # Audio
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
-    $(DEVICE_PATH)/configs/audio/mixer_usb_default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_usb_default.xml \
-    $(DEVICE_PATH)/configs/audio/mixer_usb_gray.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_usb_gray.xml
+    $(LOCAL_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
+    $(LOCAL_PATH)/configs/audio/mixer_usb_default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_usb_default.xml \
+    $(LOCAL_PATH)/configs/audio/mixer_usb_gray.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_usb_gray.xml
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -41,7 +39,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Sensors
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
+    $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
 PRODUCT_PACKAGES += \
     sensors.r8s \
@@ -49,7 +47,7 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(DEVICE_PATH) \
+    $(LOCAL_PATH) \
     hardware/qcom/wlan \
     hardware/qcom/wlan/legacy 
 
@@ -72,7 +70,7 @@ PRODUCT_PACKAGES += \
     WifiOverlay
 
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/macloader/macloader:$(TARGET_COPY_OUT_VENDOR)/bin/hw/macloader
+    $(LOCAL_PATH)/macloader/macloader:$(TARGET_COPY_OUT_VENDOR)/bin/hw/macloader
 
 # Wi-Fi Display
 PRODUCT_PACKAGES += \
@@ -83,5 +81,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.wifi.sap.interface=wlan1
 
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
-    $(DEVICE_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
+    $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
+    $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
