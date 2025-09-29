@@ -48,7 +48,10 @@ PRODUCT_PACKAGES += \
     sensors.r8s
 
 # Soong namespaces
-PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
+PRODUCT_SOONG_NAMESPACES += \
+    $(DEVICE_PATH) \
+    hardware/qcom/wlan \
+    hardware/qcom/wlan/legacy 
 
 # Inherit from common
 $(call inherit-product, device/samsung/universal9830-common/device-common.mk)
