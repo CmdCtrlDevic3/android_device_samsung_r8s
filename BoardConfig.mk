@@ -13,6 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# inherit from common
+include device/samsung/universal9830-common/BoardConfigCommon.mk
+
 DEVICE_PATH := device/samsung/r8s
 
 # Audio
@@ -51,9 +54,6 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 QC_WIFI_HIDL_FEATURE_DUAL_AP := true
-
-# inherit from common
-include device/samsung/universal9830-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
 -include vendor/samsung/r8s/BoardConfigVendor.mk
