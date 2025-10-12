@@ -20,19 +20,17 @@ from extract_utils.main import (
 
 namespace_imports = [
     'device/samsung/universal9830-common',
+    'hardware/samsung',
     'hardware/samsung_slsi-linaro/exynos',
+    'hardware/samsung_slsi-linaro/exynos/gralloc/gralloc3',
     'hardware/samsung_slsi-linaro/graphics',
+    'hardware/samsung_slsi-linaro/interfaces',
     'vendor/samsung/universal9830-common'
 ]
 
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}_{partition}' if partition == 'vendor' else None
-
-
-lib_fixups: lib_fixups_user_type = {
-    'libsecril-client': lib_fixup_vendor_suffix,
-}
 
 
 blob_fixups: blob_fixups_user_type = {
@@ -52,7 +50,6 @@ module = ExtractUtilsModule(
     'r8s',
     'samsung',
     blob_fixups=blob_fixups,
-    lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
 )
 

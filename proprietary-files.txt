@@ -4,9 +4,7 @@
 # Audio
 vendor/etc/dolby/dax-default.xml
 vendor/etc/floating_feature.xml
-vendor/lib/librecordalive.so
 vendor/lib/lib_SamsungRec_07020.so
-vendor/lib/libsecaudioinfo.so
 vendor/lib/soundfx/libswdap.so
 
 # Audio (Firmware)
@@ -67,6 +65,9 @@ product/priv-app/HotwordEnrollmentXGoogleEx2CORTEXM4/HotwordEnrollmentXGoogleEx2
 vendor/etc/nfc/sec_s3nrn4v_hwreg.bin
 vendor/etc/nfc/sec_s3nrn4v_swreg.bin
 vendor/firmware/nfc/sec_s3nrn4v_firmware.bin
+
+# RIL
+vendor/etc/floating_feature.xml
 
 # Sensors
 vendor/lib64/sensors.sensorhub.so
