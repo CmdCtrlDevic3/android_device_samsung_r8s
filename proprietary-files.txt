@@ -36,6 +36,14 @@ vendor/lib64/libexynoscamera_vpl_plugin.so
 vendor/firmware/dual_cal_wide_swide.bin
 vendor/firmware/dual_cal_wide_tele.bin
 
+# Fingerprint
+vendor/lib64/libbauthserver.so
+vendor/lib64/libbauthtzcommon.so
+vendor/lib64/libegis_fp_normal_sensor_test.so
+vendor/lib64/libgf_in_system_lib.so
+vendor/lib64/libqfp_sensortest.so
+vendor/lib64/libsynaFpSensorTestNwd.so
+
 # Firmware
 vendor/firmware/a96t356_r8s.bin
 vendor/firmware/cs35l40-bot-dsp1-spk-prot-calib.bin
