@@ -10,6 +10,8 @@ from extract_utils.fixups_blob import (
 )
 
 from extract_utils.fixups_lib import (
+    lib_fixup_remove,
+    lib_fixups,
     lib_fixups_user_type,
 )
 
@@ -32,6 +34,12 @@ namespace_imports = [
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}_{partition}' if partition == 'vendor' else None
 
+lib_fixups: lib_fixups_user_type = {
+    **lib_fixups,
+    (
+        'libuuid',
+    ): lib_fixup_vendor_suffix,
+}
 
 blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libexynoscamera3.so': blob_fixup()
@@ -50,6 +58,7 @@ module = ExtractUtilsModule(
     'r8s',
     'samsung',
     blob_fixups=blob_fixups,
+    lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
 )
 
