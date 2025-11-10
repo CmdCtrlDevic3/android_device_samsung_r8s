@@ -54,6 +54,10 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom/wlan \
     hardware/qcom/wlan/legacy 
 
+# UDFPS
+$(call soong_config_set,samsungUdfpsVars,udfps_zorder,0xff)
+$(call soong_config_set,surfaceflinger,udfps_lib,//hardware/samsung/fingerprint:libudfps_extension.samsung)
+
 # Inherit from common
 $(call inherit-product, device/samsung/universal9830-common/device-common.mk)
 
